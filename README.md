@@ -53,27 +53,21 @@ pythonExe = "python.exe"   ' or "C:\Python312\python.exe"
 ' ★★★ #3: If you have a calendar exe, set its full path; if not, delete this line ★★★
 calendarApp = "D:\My calendar\pake-acalendar.exe"   ' change to your actual path
 Example (if your project is on E drive):
+
 Environment Setup & Installation
 1. Python Environment (Required)
 Python 3.8 or higher is required
-
 Install dependencies (run in command line):
-
 bash
 pip install flask flask-cors
 2. AutoHotkey (Optional)
 If you need the system-level always-on-top popup feature, you need to install AutoHotkey v1
-
 After installation, make sure remind.ahk is in the same directory as server.py
-
 3. Port Configuration
 The Python service runs on 127.0.0.1:5678 by default
-
 If port 5678 is occupied, you can change it in the last line of server.py
-
 4. One-Click Launch Script (Windows)
 Edit start.vbs and change the following paths to match your system:
-
 vbs
 projectFolder = "D:\reminder_service"   ' Change to your project path
 pythonExe = "python.exe"                ' Or full path like "C:\Python312\python.exe"
@@ -87,20 +81,16 @@ Method 3	Open index.html directly in browser	Web-only version, no reminders
 bash
 # 1. Install dependencies
 pip install flask flask-cors
-
 # 2. Start the reminder service
 python server.py
-
 # 3. Open index.html in your browser
 # (or double-click start.vbs for one-click launch)
 💡 Pro Tip: Create requirements.txt
 For better compatibility, create a requirements.txt file in your project root:
-
 text
 flask
 flask-cors
 Then users can install all dependencies with a single command:
-
 bash
 pip install -r requirements.txt
 
