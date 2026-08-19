@@ -45,7 +45,7 @@ pythonExe = "python.exe"   ' 或 "C:\Python312\python.exe"
 
 ' ★★★ 第3处：如果你有日历 exe，改为完整路径；如果没有，删除这行 ★★★
 calendarApp = "D:\My calendar\pake-acalendar.exe"   ' 改为你的实际路径
-🔧 环境配置与安装
+环境配置与安装
 1. Python 环境（必须）
 需要 Python 3.8 或更高版本
 安装依赖包（在命令行中执行）：
@@ -54,9 +54,36 @@ pip install flask flask-cors
 2. AutoHotkey（可选）
 如果你需要使用系统置顶弹窗功能，需要安装 AutoHotkey v1
 安装后，确保 remind.ahk 与 server.py 在同一目录下
-3. 端口占用
+3. 端口配置
 Python 服务默认运行在 127.0.0.1:5678
-如果 5678 端口被占用，请在 server.py 最后一行修改端口号
+如果 5678 端口被占用，可以在 server.py 最后一行修改端口号
+4. 一键启动脚本配置（Windows）
+编辑 start.vbs，将以下路径改为你电脑上的实际路径：
+vbs
+projectFolder = "D:\reminder_service"   ' 改为你的项目路径
+pythonExe = "python.exe"                ' 或完整路径如 "C:\Python312\python.exe"
+calendarApp = "D:\My calendar\pake-acalendar.exe"  ' 改为你的应用路径
+5. 运行方式
+方式	操作	适用场景
+方式一（推荐）	双击 start.vbs（需先完成配置）	一键启动服务 + 应用
+方式二	运行 python server.py，然后打开 index.html	完整功能，带提醒
+方式三	直接在浏览器中打开 index.html	纯网页版，无提醒功能
+🚀 快速开始（简洁版）
+bash
+# 1. 安装依赖
+pip install flask flask-cors
+# 2. 启动提醒服务
+python server.py
+# 3. 在浏览器中打开 index.html
+#（或双击 start.vbs 一键启动）
+💡 进阶建议：创建 requirements.txt
+为了更方便其他人使用，建议在项目根目录创建 requirements.txt 文件，内容为：
+text
+flask
+flask-cors
+这样别人只需一条命令即可安装所有依赖：
+bash
+pip install -r requirements.txt
 
 
 示例（假设你的项目在 E 盘）：
