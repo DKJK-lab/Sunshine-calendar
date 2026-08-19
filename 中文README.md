@@ -45,7 +45,18 @@ pythonExe = "python.exe"   ' 或 "C:\Python312\python.exe"
 
 ' ★★★ 第3处：如果你有日历 exe，改为完整路径；如果没有，删除这行 ★★★
 calendarApp = "D:\My calendar\pake-acalendar.exe"   ' 改为你的实际路径
-
+🔧 环境配置与安装
+1. Python 环境（必须）
+需要 Python 3.8 或更高版本
+安装依赖包（在命令行中执行）：
+bash
+pip install flask flask-cors
+2. AutoHotkey（可选）
+如果你需要使用系统置顶弹窗功能，需要安装 AutoHotkey v1
+安装后，确保 remind.ahk 与 server.py 在同一目录下
+3. 端口占用
+Python 服务默认运行在 127.0.0.1:5678
+如果 5678 端口被占用，请在 server.py 最后一行修改端口号
 
 
 示例（假设你的项目在 E 盘）：
