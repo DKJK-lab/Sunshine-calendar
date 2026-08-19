@@ -52,7 +52,7 @@ pythonExe = "python.exe"   ' or "C:\Python312\python.exe"
 
 ' ★★★ #3: If you have a calendar exe, set its full path; if not, delete this line ★★★
 calendarApp = "D:\My calendar\pake-acalendar.exe"   ' change to your actual path
-Example (if your project is on E drive):
+
 
 Environment Setup & Installation
 1. Python Environment (Required)
@@ -93,9 +93,9 @@ flask-cors
 Then users can install all dependencies with a single command:
 bash
 pip install -r requirements.txt
-
-
 vbs
+
+Example (if your project is on E drive):
 projectFolder = "E:\my_projects\reminder_service"
 pythonExe = "E:\Python314\python.exe"
 calendarApp = "E:\calendar\pake-acalendar.exe"
